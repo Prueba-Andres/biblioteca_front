@@ -22,5 +22,10 @@ export class LibrosService {
     return this.httpClient.post(this.API_SERVER, libro);
   }
 
+  public eliminarLibro(id: number):Observable<any>{
+    console.log("res " + id)
+    return this.httpClient.delete(this.API_SERVER + "delete/" +id);
+  }
+
 
 }
